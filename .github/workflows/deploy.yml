@@ -20,14 +20,17 @@ jobs:
           port: 21
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
+          protocol: ftps
           local-dir: ./
-          server-dir: /
+          server-dir: /public_html/
           dangerous-clean-slate: false
           dry-run: false
           log-level: verbose
+          timeout: 60000
           exclude: |
             **/.git*
             **/.github/**
             **/.agent/**
             **/node_modules/**
             **/.gitignore
+
