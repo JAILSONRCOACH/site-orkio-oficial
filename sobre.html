@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Orkyo AI — IA Para Negócios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description"
+        content="Conheça a Orkyo AI: automação, dados e IA aplicadas à operação de empresas. Saiba nossa visão, missão e valores.">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="image/logo.png" alt="Orkyo AI" style="height: 70px;" onerror="this.style.display='none';">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="sobre.html" class="active">Sobre</a></li>
+                <li><a href="index.html#contato" class="btn-primary-small">Fale Conosco</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html#servicos" onclick="closeMobileMenu()">Serviços</a>
+            <a href="sobre.html" onclick="closeMobileMenu()">Sobre</a>
+            <a href="index.html#contato" class="btn-primary" onclick="closeMobileMenu()">Fale Conosco</a>
+        </div>
+    </nav>
+
+    <!-- Hero Sobre -->
+    <header class="hero hero-sobre">
+        <canvas id="heroCanvas"></canvas>
+        <div class="container hero-content">
+            <p class="hero-brand fade-in-up">ORKYO AI — <span class="highlight">Sobre Nós</span></p>
+            <h1 class="fade-in-up">IA Para <span class="highlight">Negócios</span></h1>
+            <p class="fade-in-up delay-1">Transformamos operação em resultado com automação, dados e Inteligência
+                Artificial.</p>
+        </div>
+        <div class="hero-bg-glow"></div>
+    </header>
+
+    <!-- Quem Somos -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Quem Somos</h2>
+            </div>
+            <div class="about-content reveal">
+                <p>Somos uma empresa focada em <strong>transformar operação em resultado</strong>. Aplicamos automação,
+                    dados e Inteligência Artificial para reduzir retrabalho, acelerar atendimento, padronizar processos
+                    e dar previsibilidade para quem precisa crescer sem perder controle.</p>
+                <p>Nossa entrega é prática: identificar gargalos, estruturar o que está desorganizado e implementar
+                    soluções que rodam no dia a dia — <strong>integração, automação e IA com objetivo claro</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visão & Missão -->
+    <section class="vision-mission-section">
+        <div class="container">
+            <div class="vm-grid">
+                <div class="vm-card reveal stagger-1">
+                    <div class="vm-icon">🔭</div>
+                    <h3>Visão</h3>
+                    <p>Ser a referência em IA aplicada à operação de empresas, tornando automação e inteligência
+                        acessíveis, úteis e mensuráveis — do atendimento ao backoffice.</p>
+                </div>
+                <div class="vm-card reveal stagger-2">
+                    <div class="vm-icon">🎯</div>
+                    <h3>Missão</h3>
+                    <p>Ajudar empresas a crescerem com eficiência, conectando pessoas, processos e tecnologia por meio
+                        de automação, dados e Inteligência Artificial, com foco em produtividade, redução de custos e
+                        aumento de vendas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Nossos Valores</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card reveal stagger-1">
+                    <div class="value-icon">🏆</div>
+                    <h4>Resultado acima de discurso</h4>
+                    <p>Entrega que melhora a operação de verdade.</p>
+                </div>
+                <div class="value-card reveal stagger-2">
+                    <div class="value-icon">💎</div>
+                    <h4>Clareza e simplicidade</h4>
+                    <p>Solução fácil de operar, sem complicar o time.</p>
+                </div>
+                <div class="value-card reveal stagger-3">
+                    <div class="value-icon">⚙️</div>
+                    <h4>Processo e método</h4>
+                    <p>Crescimento sustentável exige padrão e rotina.</p>
+                </div>
+                <div class="value-card reveal stagger-4">
+                    <div class="value-icon">📊</div>
+                    <h4>Dados na tomada de decisão</h4>
+                    <p>Medir, ajustar e evoluir continuamente.</p>
+                </div>
+                <div class="value-card reveal stagger-5">
+                    <div class="value-icon">🔒</div>
+                    <h4>Segurança e confidencialidade</h4>
+                    <p>Informação do cliente é prioridade.</p>
+                </div>
+                <div class="value-card reveal stagger-6">
+                    <div class="value-icon">💡</div>
+                    <h4>Inovação com propósito</h4>
+                    <p>Tecnologia só entra se gerar impacto real.</p>
+                </div>
+                <div class="value-card reveal stagger-1">
+                    <div class="value-icon">🤝</div>
+                    <h4>Compromisso e consistência</h4>
+                    <p>O que funciona é o que é aplicado todos os dias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="experience-content reveal">
+                <div class="experience-badge">Décadas de Vivência</div>
+                <h2>Nossa Experiência</h2>
+                <p>Com décadas de vivência prática em gestão, processos e tecnologia aplicada ao mundo real, a
+                    <strong>ORKYO IA</strong> une fundamentos sólidos de administração com ferramentas modernas de
+                    automação e IA.</p>
+                <p>Isso garante soluções <strong>robustas, escaláveis e alinhadas à realidade de cada negócio</strong> —
+                    sem modismos, sem promessas vazias.</p>
+                <a href="index.html#contato" class="btn-primary"
+                    style="margin-top: 32px; display: inline-block;">Solicitar Diagnóstico Gratuito</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal stagger-1">
+                    <span class="stat-number" data-target="50">0</span>+
+                    <span class="stat-label">Clientes Atendidos</span>
+                </div>
+                <div class="stat-item reveal stagger-2">
+                    <span class="stat-number" data-target="98">0</span>%
+                    <span class="stat-label">Satisfação</span>
+                </div>
+                <div class="stat-item reveal stagger-3">
+                    <span class="stat-number" data-target="500">0</span>+
+                    <span class="stat-label">Automações Criadas</span>
+                </div>
+                <div class="stat-item reveal stagger-4">
+                    <span class="stat-number" data-target="24">0</span>h
+                    <span class="stat-label">Resposta Garantida</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="https://iaparanegociios.lovable.app/" target="_blank">App Orkyo</a>
+                <a href="https://www.instagram.com/orkyo_ia/" target="_blank">Instagram</a>
+                <a href="https://wa.me/5583991287155" target="_blank">WhatsApp</a>
+            </div>
+            <p>&copy; 2026 Orkyo AI - IA Para Negócios. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // 1. HERO PARTICLE CANVAS
+        // ==========================================
+        (function () {
+            const canvas = document.getElementById('heroCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            const PARTICLE_COUNT = 60;
+
+            function resize() {
+                const hero = canvas.parentElement;
+                canvas.width = hero.offsetWidth;
+                canvas.height = hero.offsetHeight;
+            }
+
+            function createParticle() {
+                return {
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2 + 0.5,
+                    speedX: (Math.random() - 0.5) * 0.4,
+                    speedY: (Math.random() - 0.5) * 0.3,
+                    opacity: Math.random() * 0.5 + 0.1
+                };
+            }
+
+            function init() {
+                resize();
+                particles = [];
+                for (let i = 0; i < PARTICLE_COUNT; i++) {
+                    particles.push(createParticle());
+                }
+            }
+
+            function drawParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(0, 195, 249, ${p.opacity})`;
+                    ctx.fill();
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+                    if (p.x < 0) p.x = canvas.width;
+                    if (p.x > canvas.width) p.x = 0;
+                    if (p.y < 0) p.y = canvas.height;
+                    if (p.y > canvas.height) p.y = 0;
+                });
+
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 120) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(0, 195, 249, ${0.08 * (1 - dist / 120)})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(drawParticles);
+            }
+
+            window.addEventListener('resize', resize);
+            init();
+            drawParticles();
+        })();
+
+        // ==========================================
+        // 2. SCROLL REVEAL
+        // ==========================================
+        (function () {
+            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            revealEls.forEach(el => observer.observe(el));
+        })();
+
+        // ==========================================
+        // 3. ANIMATED STAT COUNTERS
+        // ==========================================
+        (function () {
+            const counters = document.querySelectorAll('.stat-number[data-target]');
+            let counted = false;
+
+            function animateCounters() {
+                counters.forEach(counter => {
+                    const target = +counter.dataset.target;
+                    const duration = 2000;
+                    const start = performance.now();
+                    function update(now) {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        counter.textContent = Math.floor(target * eased);
+                        if (progress < 1) requestAnimationFrame(update);
+                        else counter.textContent = target;
+                    }
+                    requestAnimationFrame(update);
+                });
+            }
+
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !counted) {
+                        counted = true;
+                        animateCounters();
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            const statsSection = document.querySelector('.stats-section');
+            if (statsSection) statsObserver.observe(statsSection);
+        })();
+
+        // ==========================================
+        // 4. NAVBAR SCROLL EFFECT
+        // ==========================================
+        (function () {
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.style.padding = '12px 0';
+                    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+                } else {
+                    navbar.style.padding = '20px 0';
+                    navbar.style.boxShadow = 'none';
+                }
+            });
+        })();
+
+        // ==========================================
+        // 5. MOBILE HAMBURGER MENU
+        // ==========================================
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        function closeMobileMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
