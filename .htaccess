@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Optional: Force www or non-www (uncomment one if needed)
+# RewriteCond %{HTTP_HOST} ^www\.orkyo\.com\.br [NC]
+# RewriteRule ^(.*)$ https://orkyo.com.br/$1 [L,R=301]
+
+# Prevent directory listing
+Options -Indexes
