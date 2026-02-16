@@ -634,10 +634,6 @@ footer::before {
     .hero-bg-glow {
         animation: none;
     }
-
-    #heroCanvas {
-        display: none;
-    }
 }
 
 /* Hamburger Button */
