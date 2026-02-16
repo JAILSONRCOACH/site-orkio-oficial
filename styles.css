@@ -1147,16 +1147,37 @@ footer p {
 }
 
 /* ==========================================
-   ABOUT PAGE (sobre.html)
+   ABOUT PAGE — PREMIUM DESIGN (sobre.html)
    ========================================== */
 
-/* Smaller hero for inner pages */
+/* ---- Hero Inner Page ---- */
 .hero-sobre {
-    padding: 140px 0 80px;
+    padding: 150px 0 90px;
+    min-height: auto;
 }
 
 .hero-sobre h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.hero-sub {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.sobre-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    background: rgba(0, 195, 249, 0.08);
+    border: 1px solid rgba(0, 195, 249, 0.25);
+    border-radius: 50px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 /* Active nav link */
@@ -1173,53 +1194,106 @@ footer p {
     width: 100%;
     height: 2px;
     background: var(--primary);
+    border-radius: 2px;
 }
 
-/* About Sections Common */
-.about-section,
-.vision-mission-section,
-.values-section,
-.experience-section {
-    padding: 80px 0;
+/* ---- Intro Section (Quem Somos + Stats) ---- */
+.sobre-intro-section {
+    padding: 90px 0;
 }
 
-/* About Content */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+.sobre-intro-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.about-content p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: var(--text-muted);
+.sobre-intro-text h2 {
+    font-size: 2.2rem;
     margin-bottom: 20px;
-}
-
-.about-content strong {
     color: var(--text-main);
 }
 
-/* Vision & Mission Grid */
-.vm-grid {
+.sobre-intro-text p {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.sobre-intro-text strong {
+    color: var(--text-main);
+}
+
+/* Stats highlights */
+.sobre-intro-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.highlight-item {
+    background: rgba(0, 195, 249, 0.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 195, 249, 0.12);
+    border-radius: 16px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.35s ease;
+}
+
+.highlight-item:hover {
+    background: rgba(0, 195, 249, 0.08);
+    border-color: rgba(0, 195, 249, 0.3);
+    transform: translateX(6px);
+    box-shadow: 0 8px 30px -10px rgba(0, 195, 249, 0.2);
+}
+
+.highlight-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--primary-soft));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    min-width: 80px;
+}
+
+.highlight-label {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ---- Vision & Mission ---- */
+.sobre-vm-section {
+    padding: 90px 0;
+    background: linear-gradient(180deg, rgba(0, 195, 249, 0.02) 0%, transparent 100%);
+}
+
+.sobre-vm-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
 }
 
-.vm-card {
-    background: var(--bg-card);
-    padding: 40px 32px;
-    border-radius: var(--border-radius);
+.sobre-vm-card {
+    background: rgba(4, 45, 77, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(0, 195, 249, 0.1);
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 20px;
+    padding: 44px 36px;
     position: relative;
     overflow: hidden;
+    transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.vm-card::before {
+.sobre-vm-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1231,161 +1305,242 @@ footer p {
     transition: opacity 0.4s ease;
 }
 
-.vm-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary);
-    box-shadow: 0 20px 40px -15px rgba(0, 195, 249, 0.2);
+.sobre-vm-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 195, 249, 0.04), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
-.vm-card:hover::before {
+.sobre-vm-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 195, 249, 0.3);
+    box-shadow: 0 25px 50px -15px rgba(0, 195, 249, 0.15), 0 0 0 1px rgba(0, 195, 249, 0.08);
+}
+
+.sobre-vm-card:hover::before,
+.sobre-vm-card:hover::after {
     opacity: 1;
 }
 
-.vm-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    display: block;
+.sobre-vm-icon-wrap {
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 195, 249, 0.06);
+    border: 1px solid rgba(0, 195, 249, 0.15);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.35s ease;
 }
 
-.vm-card h3 {
+.sobre-vm-card:hover .sobre-vm-icon-wrap {
+    background: rgba(0, 195, 249, 0.12);
+    box-shadow: 0 0 25px rgba(0, 195, 249, 0.15);
+    transform: scale(1.08);
+}
+
+.sobre-vm-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 16px;
-    color: var(--primary);
+    color: var(--text-main);
+    margin-bottom: 14px;
 }
 
-.vm-card p {
+.sobre-vm-card p {
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.75;
     font-size: 1rem;
 }
 
-/* Values Grid */
-.values-section {
-    background: linear-gradient(135deg, rgba(0, 195, 249, 0.03) 0%, transparent 100%);
+.sobre-vm-card p strong {
+    color: var(--primary);
 }
 
-.values-grid {
+/* ---- Valores Grid ---- */
+.sobre-valores-section {
+    padding: 90px 0;
+}
+
+.section-sub {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-top: 8px;
+}
+
+.sobre-valores-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-.value-card {
-    background: var(--bg-card);
-    padding: 28px 24px;
-    border-radius: var(--border-radius);
+.sobre-valor-card {
+    background: rgba(4, 45, 77, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(0, 195, 249, 0.08);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 16px;
+    padding: 28px 24px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.value-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--primary);
-    box-shadow: 0 15px 35px -10px rgba(0, 195, 249, 0.2);
+.sobre-valor-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 195, 249, 0.25);
+    box-shadow: 0 15px 40px -12px rgba(0, 195, 249, 0.15);
+    background: rgba(4, 45, 77, 0.7);
 }
 
-.value-icon {
-    font-size: 2.2rem;
-    margin-bottom: 16px;
-    display: inline-flex;
+.valor-icon-wrap {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: rgba(0, 195, 249, 0.06);
+    border: 1px solid rgba(0, 195, 249, 0.12);
+    border-radius: 12px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
-    background: rgba(0, 195, 249, 0.06);
-    border-radius: 14px;
     transition: all 0.3s ease;
 }
 
-.value-card:hover .value-icon {
-    transform: scale(1.15);
+.sobre-valor-card:hover .valor-icon-wrap {
     background: rgba(0, 195, 249, 0.12);
-    box-shadow: 0 0 20px rgba(0, 195, 249, 0.15);
+    box-shadow: 0 0 18px rgba(0, 195, 249, 0.12);
 }
 
-.value-card h4 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+.sobre-valor-card h4 {
+    font-size: 1.05rem;
     color: var(--text-main);
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
-.value-card p {
+.sobre-valor-card p {
     color: var(--text-muted);
     font-size: 0.9rem;
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
-/* Experience Section */
-.experience-section {
-    background: var(--bg-card);
-    border-top: 1px solid rgba(0, 195, 249, 0.08);
-    border-bottom: 1px solid rgba(0, 195, 249, 0.08);
+/* ---- Experience Featured Card ---- */
+.sobre-exp-section {
+    padding: 90px 0;
 }
 
-.experience-content {
+.sobre-exp-card {
+    background: linear-gradient(135deg, rgba(0, 195, 249, 0.06) 0%, rgba(4, 45, 77, 0.8) 50%, rgba(0, 195, 249, 0.03) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 195, 249, 0.15);
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sobre-exp-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 10%, var(--primary) 50%, transparent 90%);
+}
+
+.sobre-exp-inner {
+    padding: 56px 48px;
+    text-align: center;
     max-width: 750px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.experience-badge {
+.sobre-exp-badge {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 8px 22px;
     background: rgba(0, 195, 249, 0.1);
-    border: 1px solid rgba(0, 195, 249, 0.2);
+    border: 1px solid rgba(0, 195, 249, 0.25);
     border-radius: 50px;
     color: var(--primary);
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.experience-content h2 {
-    font-size: 2.5rem;
     margin-bottom: 24px;
-    color: var(--text-main);
 }
 
-.experience-content p {
+.sobre-exp-inner h2 {
+    font-size: 2.4rem;
+    color: var(--text-main);
+    margin-bottom: 24px;
+}
+
+.sobre-exp-inner p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-muted);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
-.experience-content strong {
+.sobre-exp-inner strong {
     color: var(--text-main);
 }
 
-/* About page responsive */
+/* ---- About Page Responsive ---- */
 @media (max-width: 768px) {
-    .hero-sobre h1 {
-        font-size: 2rem;
+    .hero-sobre {
+        padding: 130px 0 60px;
     }
 
-    .vm-grid {
+    .sobre-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sobre-intro-highlights {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .highlight-item {
+        flex: 1;
+        min-width: 140px;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    .highlight-number {
+        min-width: auto;
+    }
+
+    .sobre-vm-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .values-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
+    .sobre-vm-card {
+        padding: 32px 24px;
     }
 
-    .experience-content h2 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .values-grid {
+    .sobre-valores-grid {
         grid-template-columns: 1fr;
+    }
+
+    .sobre-exp-inner {
+        padding: 36px 24px;
+    }
+
+    .sobre-exp-inner h2 {
+        font-size: 1.8rem;
     }
 }
