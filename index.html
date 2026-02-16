@@ -292,7 +292,6 @@
             const ctx = canvas.getContext('2d');
             let particles = [];
             const PARTICLE_COUNT = 60;
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
             function resize() {
                 const hero = canvas.parentElement;
@@ -319,7 +318,7 @@
                 }
             }
 
-            function drawFrame(animate) {
+            function drawFrame() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 particles.forEach(p => {
                     ctx.beginPath();
@@ -327,14 +326,12 @@
                     ctx.fillStyle = `rgba(0, 195, 249, ${p.opacity})`;
                     ctx.fill();
 
-                    if (animate) {
-                        p.x += p.speedX;
-                        p.y += p.speedY;
-                        if (p.x < 0) p.x = canvas.width;
-                        if (p.x > canvas.width) p.x = 0;
-                        if (p.y < 0) p.y = canvas.height;
-                        if (p.y > canvas.height) p.y = 0;
-                    }
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+                    if (p.x < 0) p.x = canvas.width;
+                    if (p.x > canvas.width) p.x = 0;
+                    if (p.y < 0) p.y = canvas.height;
+                    if (p.y > canvas.height) p.y = 0;
                 });
 
                 // Draw lines between nearby particles
@@ -354,12 +351,12 @@
                     }
                 }
 
-                if (animate) requestAnimationFrame(() => drawFrame(true));
+                requestAnimationFrame(drawFrame);
             }
 
-            window.addEventListener('resize', () => { resize(); if (prefersReducedMotion) drawFrame(false); });
+            window.addEventListener('resize', resize);
             init();
-            drawFrame(!prefersReducedMotion);
+            drawFrame();
         })();
 
         // ==========================================
