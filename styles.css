@@ -1880,8 +1880,8 @@ footer p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 860px;
-    margin: 12px auto 28px;
+    max-width: 760px;
+    margin: 10px auto 22px;
 }
 
 .hero-img-main {
@@ -1889,7 +1889,7 @@ footer p {
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: min(55vh, 520px);
+    max-height: min(46vh, 430px);
     object-fit: contain;
     background: #041b30;
     border-radius: 24px;
@@ -1962,11 +1962,12 @@ footer p {
     }
 
     .hero-image-content {
+        max-width: 680px;
         margin: 16px auto 24px;
     }
     
     .hero-img-main {
-        max-height: min(48vh, 420px);
+        max-height: min(40vh, 360px);
         transform: none; /* Remove 3D effect on mobile for simplicity */
     }
 
@@ -1984,6 +1985,7 @@ footer p {
     }
     
     .hero-img-main {
-        max-height: min(42vh, 320px);
+        max-height: min(34vh, 260px);
+        border-radius: 16px;
     }
 }
