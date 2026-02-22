@@ -6,12 +6,56 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        if: ${{ hashFiles('package.json') != '' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies
+        if: ${{ hashFiles('package.json') != '' }}
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci --legacy-peer-deps
+          else
+            npm install --legacy-peer-deps
+          fi
+
+      - name: Build
+        if: ${{ hashFiles('package.json') != '' }}
+        run: npm run build
+
+      - name: Prepare static dist
+        if: ${{ hashFiles('package.json') == '' }}
+        run: |
+          mkdir -p dist
+          rsync -av --delete \
+            --exclude '.git*' \
+            --exclude '.github' \
+            --exclude 'node_modules' \
+            --exclude 'dist' \
+            ./ dist/
+
+      - name: Create SPA .htaccess
+        run: |
+          cat > dist/.htaccess << 'EOF'
+          <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteBase /
+            RewriteRule ^index\.html$ - [L]
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+            RewriteRule . /index.html [L]
+          </IfModule>
+          EOF
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -20,17 +64,12 @@ jobs:
           port: 21
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          protocol: ftps
-          local-dir: ./
+          local-dir: dist/
           server-dir: /
           dangerous-clean-slate: false
           dry-run: false
           log-level: verbose
-          timeout: 60000
           exclude: |
             **/.git*
             **/.github/**
-            **/.agent/**
             **/node_modules/**
-            **/.gitignore
-
