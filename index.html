@@ -1,541 +1,692 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orkyo AI | Automação e Inteligência Artificial</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
-    <meta name="description"
-        content="Transforme a operação da sua empresa com Inteligência Artificial. Automação, atendimento e vendas com a Orkyo AI.">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=2" />
+    <meta
+      name="description"
+      content="Transforme a operação da sua empresa com Inteligência Artificial. Automação, atendimento e vendas com a Orkyo AI."
+    />
+  </head>
 
-<body>
+  <body>
     <nav class="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <img src="image/logo.png" alt="Orkyo AI" style="height: 70px;" onerror="this.style.display='none';">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-                <li><a href="#contato" class="btn-primary-small">Fale Conosco</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="#servicos" onclick="closeMobileMenu()">Serviços</a>
-            <a href="sobre.html" onclick="closeMobileMenu()">Sobre</a>
-            <a href="clientes.html" onclick="closeMobileMenu()">Clientes</a>
-            <a href="#contato" class="btn-primary" onclick="closeMobileMenu()">Fale Conosco</a>
-        </div>
+      <div class="container nav-content">
+        <a href="#" class="logo">
+          <img
+            src="image/logo.png"
+            alt="Orkyo AI"
+            style="height: 70px"
+            onerror="this.style.display = 'none'"
+          />
+        </a>
+        <ul class="nav-links">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="#contato" class="btn-primary-small">Fale Conosco</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#servicos" onclick="closeMobileMenu()">Serviços</a>
+        <a href="sobre.html" onclick="closeMobileMenu()">Sobre</a>
+        <a href="clientes.html" onclick="closeMobileMenu()">Clientes</a>
+        <a href="#contato" class="btn-primary" onclick="closeMobileMenu()"
+          >Fale Conosco</a
+        >
+      </div>
     </nav>
 
     <header class="hero">
-        <canvas id="heroCanvas"></canvas>
-        <div class="container hero-content">
-            <p class="hero-brand fade-in-up">ORKYO AI — <span class="highlight">IA Para Negócios</span></p>
-            <h1 class="fade-in-up">Potencialize o <span class="highlight">Crescimento</span> da Sua Empresa</h1>
-            <p class="fade-in-up delay-1">Identificamos gargalos operacionais e implementamos soluções estratégicas para
-                escalar seu negócio com previsibilidade e automação.</p>
+      <canvas id="heroCanvas"></canvas>
+      <div class="container hero-split-layout">
+        <div class="hero-text-content">
+          <p class="hero-brand fade-in-up">
+            ORKYO AI — <span class="highlight">IA Para Negócios</span>
+          </p>
+          <h1 class="fade-in-up">
+            Sua Empresa Roda no <span class="highlight">Automático</span> ou
+            Você Ainda Apaga Incêndios?
+          </h1>
+          <p class="fade-in-up delay-1">
+            Transformamos operações manuais e caóticas em processos inteligentes
+            que vendem e atendem sozinhos. Com ou sem IA.
+          </p>
 
-            <ul class="hero-bullets fade-in-up delay-1">
-                <li>🚀 Aumente sua margem de lucro</li>
-                <li>⚙️ Automatize processos manuais</li>
-                <li>📊 Tome decisões baseadas em dados</li>
-            </ul>
-
-            <div class="hero-buttons fade-in-up delay-2">
-                <a href="#contato" class="btn-primary">Solicitar Diagnóstico</a>
-                <a href="https://wa.me/5583991287155" target="_blank" class="btn-secondary">
-                    <span class="icon-wa">💬</span> Chamar no WhatsApp
-                </a>
+          <div class="hero-image-content fade-in-up delay-2">
+            <video
+              class="hero-img-main"
+              autoplay
+              loop
+              playsinline
+              controls
+              preload="metadata"
+              aria-label="Profissional usando tecnologia para negócios"
+            >
+              <source src="image/hero-human.mp4" type="video/mp4" />
+              Seu navegador não suporta video em HTML5.
+            </video>
+            <div class="hero-floating-card card-1">
+              <span>⚡ Automação Ativa</span>
             </div>
+            <div class="hero-floating-card card-2">
+              <span>📈 +40% Produtividade</span>
+            </div>
+          </div>
+
+          <ul class="hero-bullets fade-in-up delay-1">
+            <li>🚀 Pare de perder tempo com tarefas repetitivas</li>
+            <li>⚙️ Atendimento 24h que parece humano</li>
+            <li>📊 Dados reais para decisões seguras</li>
+          </ul>
+
+          <div class="hero-buttons fade-in-up delay-2">
+            <a href="#contato" class="btn-primary">Quero Sair do Operacional</a>
+            <a
+              href="https://wa.me/5583991287155"
+              target="_blank"
+              class="btn-secondary"
+            >
+              <span class="icon-wa">💬</span> Chamar no WhatsApp
+            </a>
+          </div>
         </div>
-        <div class="hero-bg-glow"></div>
+      </div>
+      <div class="hero-bg-glow"></div>
     </header>
 
     <section id="servicos" class="services">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Nossos Serviços</h2>
-                <p>Soluções desenhadas para a maturidade do seu negócio.</p>
-            </div>
-            <div class="services-grid">
-                <div class="card reveal stagger-1">
-                    <div class="icon-box">🚀</div>
-                    <h3>Otimização Operacional</h3>
-                    <p>Mapeamento e reestruturação de processos para eliminar desperdícios e aumentar a produtividade.
-                    </p>
-                </div>
-                <div class="card reveal stagger-2">
-                    <div class="icon-box">💻</div>
-                    <h3>Sistemas, Landing Pages & Apps</h3>
-                    <p>Desenvolvimento de sistemas web, landing pages de alta conversão e aplicativos sob medida para o
-                        seu negócio.</p>
-                </div>
-                <div class="card reveal stagger-3">
-                    <div class="icon-box">💡</div>
-                    <h3>Transformação Digital</h3>
-                    <p>Integração de tecnologias modernas para automatizar tarefas e conectar sua equipe.</p>
-                </div>
-                <!-- New Cards -->
-                <div class="card reveal stagger-4">
-                    <div class="icon-box">⚡</div>
-                    <h3>Automações & Integrações</h3>
-                    <p>Conecte suas ferramentas (CRM, ERP, Marketing) e elimine tarefas repetitivas com n8n e IA.</p>
-                </div>
-                <div class="card reveal stagger-5">
-                    <div class="icon-box">🤝</div>
-                    <h3>Atendimento com IA Humanizado</h3>
-                    <p>Agentes de IA que atendem seus clientes 24/7 com empatia, naturalidade e eficiência — como um
-                        humano real.</p>
-                </div>
-                <div class="card reveal stagger-6">
-                    <div class="icon-box">🤖</div>
-                    <h3>IA Aplicada à Operação</h3>
-                    <p>Implemente inteligência artificial para escalar seu atendimento, vendas e análise de dados.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>O Que Resolvemos Para Você</h2>
+          <p>Não entregamos "ferramentas". Entregamos tempo e lucro.</p>
         </div>
+        <div class="services-grid">
+          <div class="card reveal stagger-1">
+            <div class="icon-box">🚀</div>
+            <h3>Adeus, Tarefas Repetitivas</h3>
+            <p>
+              Automatizamos o "copia e cola" do seu dia a dia. Foque no
+              estratégico enquanto os robôs trabalham.
+            </p>
+          </div>
+          <div class="card reveal stagger-2">
+            <div class="icon-box">💻</div>
+            <h3>Sistemas & LPs que Convertem</h3>
+            <p>
+              Não basta ser bonito. Criamos páginas e sistemas focados em uma
+              única coisa: gerar vendas.
+            </p>
+          </div>
+          <div class="card reveal stagger-3">
+            <div class="icon-box">💡</div>
+            <h3>Gestão à Prova de Falhas</h3>
+            <p>
+              Processos digitais claros onde nada se perde. Sua operação rodando
+              como um relógio suíço.
+            </p>
+          </div>
+          <!-- New Cards -->
+          <div class="card reveal stagger-4">
+            <div class="icon-box">⚡</div>
+            <h3>Integração Total (CRM/ERP)</h3>
+            <p>
+              Conectamos seu WhatsApp, CRM e planilhas. A informação flui
+              sozinha entre as ferramentas.
+            </p>
+          </div>
+          <div class="card reveal stagger-5">
+            <div class="icon-box">🤝</div>
+            <h3>Atendimento 24/7 com IA</h3>
+            <p>
+              Atenda seu cliente às 3 da manhã com a mesma qualidade das 10h.
+              Sem fila, sem erro, sem descanso.
+            </p>
+          </div>
+          <div class="card reveal stagger-6">
+            <div class="icon-box">🤖</div>
+            <h3>Inteligência de Dados</h3>
+            <p>
+              Transforme "achismo" em certeza. Painéis que mostram exatamente
+              onde está o dinheiro na sua empresa.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Stats Section -->
     <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item reveal stagger-1">
-                    <span class="stat-number" data-target="50">0</span>+
-                    <span class="stat-label">Clientes Atendidos</span>
-                </div>
-                <div class="stat-item reveal stagger-2">
-                    <span class="stat-number" data-target="98">0</span>%
-                    <span class="stat-label">Satisfação</span>
-                </div>
-                <div class="stat-item reveal stagger-3">
-                    <span class="stat-number" data-target="500">0</span>+
-                    <span class="stat-label">Automações Criadas</span>
-                </div>
-                <div class="stat-item reveal stagger-4">
-                    <span class="stat-number" data-target="24">0</span>h
-                    <span class="stat-label">Resposta Garantida</span>
-                </div>
-            </div>
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal stagger-1">
+            <span class="stat-number" data-target="50">0</span>+
+            <span class="stat-label">Clientes Atendidos</span>
+          </div>
+          <div class="stat-item reveal stagger-2">
+            <span class="stat-number" data-target="98">0</span>%
+            <span class="stat-label">Satisfação</span>
+          </div>
+          <div class="stat-item reveal stagger-3">
+            <span class="stat-number" data-target="500">0</span>+
+            <span class="stat-label">Automações Criadas</span>
+          </div>
+          <div class="stat-item reveal stagger-4">
+            <span class="stat-number" data-target="24">0</span>h
+            <span class="stat-label">Resposta Garantida</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="como-funciona" class="how-it-works">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Como Funciona</h2>
-                <p>Do caos à escala em 4 passos simples.</p>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card reveal stagger-1">
-                    <div class="step-number">01</div>
-                    <h3>Diagnóstico</h3>
-                    <p>Entendemos seu cenário atual e identificamos os principais gargalos.</p>
-                </div>
-                <div class="step-card reveal stagger-2">
-                    <div class="step-number">02</div>
-                    <h3>Plano de Ação</h3>
-                    <p>Definimos prioridades e estratégias personalizadas para o seu negócio.</p>
-                </div>
-                <div class="step-card reveal stagger-3">
-                    <div class="step-number">03</div>
-                    <h3>Implementação</h3>
-                    <p>Executamos as melhorias com processos, dados e automação.</p>
-                </div>
-                <div class="step-card reveal stagger-4">
-                    <div class="step-number">04</div>
-                    <h3>Acompanhamento</h3>
-                    <p>Monitoramos os resultados com indicadores claros de performance.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Como Funciona</h2>
+          <p>Do caos à escala em 4 passos simples.</p>
         </div>
+        <div class="steps-grid">
+          <div class="step-card reveal stagger-1">
+            <div class="step-number">01</div>
+            <h3>Diagnóstico</h3>
+            <p>
+              Entendemos seu cenário atual e identificamos os principais
+              gargalos.
+            </p>
+          </div>
+          <div class="step-card reveal stagger-2">
+            <div class="step-number">02</div>
+            <h3>Plano de Ação</h3>
+            <p>
+              Definimos prioridades e estratégias personalizadas para o seu
+              negócio.
+            </p>
+          </div>
+          <div class="step-card reveal stagger-3">
+            <div class="step-number">03</div>
+            <h3>Implementação</h3>
+            <p>Executamos as melhorias com processos, dados e automação.</p>
+          </div>
+          <div class="step-card reveal stagger-4">
+            <div class="step-number">04</div>
+            <h3>Acompanhamento</h3>
+            <p>
+              Monitoramos os resultados com indicadores claros de performance.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="contato" class="contact">
-        <div class="container split-layout">
-            <div class="contact-text reveal-left">
-                <h2>Vamos Resolver Seu Gargalo?</h2>
-                <p>Preencha o formulário e um de nossos consultores entrará em contato para um diagnóstico inicial
-                    gratuito.</p>
-                <ul class="benefits-list">
-                    <li>✓ Análise preliminar em 24h úteis</li>
-                    <li>✓ Confidencialidade garantida em contrato</li>
-                    <li>✓ Plano de ação 100% personalizado</li>
-                </ul>
+      <div class="container split-layout">
+        <div class="contact-text reveal-left">
+          <h2>Vamos Resolver Seu Gargalo?</h2>
+          <p>
+            Preencha o formulário e um de nossos consultores entrará em contato
+            para um diagnóstico inicial gratuito.
+          </p>
+          <ul class="benefits-list">
+            <li>✓ Análise preliminar em 24h úteis</li>
+            <li>✓ Confidencialidade garantida em contrato</li>
+            <li>✓ Plano de ação 100% personalizado</li>
+          </ul>
 
-                <!-- Contact Info Mobile/Desktop -->
-                <div class="contact-badges">
-                    <a href="https://wa.me/5583991287155" target="_blank" class="contact-badge">
-                        <span>📱 (83) 99128-7155</span>
-                    </a>
-                    <a href="https://www.instagram.com/orkyo_ia/" target="_blank" class="contact-badge">
-                        <span>📸 @orkyo_ia</span>
-                    </a>
-                </div>
-            </div>
-            <div class="form-wrapper reveal-right">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" name="nome_completo" placeholder="Seu nome" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="empresa">Nome da Empresa</label>
-                        <input type="text" id="empresa" name="nome_empresa" placeholder="Sua empresa" required>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">E-mail Corporativo</label>
-                            <input type="email" id="email" name="email_corporativo" placeholder="voce@empresa.com"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefone">Telefone / WhatsApp</label>
-                            <input type="tel" id="telefone" name="telefone_whatsapp" placeholder="(11) 99999-9999"
-                                required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="gargalo">Qual seu principal Gargalo Operacional?</label>
-                        <textarea id="gargalo" name="gargalo_operacional" rows="4"
-                            placeholder="Descreva brevemente o maior desafio da sua operação hoje..."
-                            required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit" id="submitBtn">Enviar Solicitação</button>
-                    <p class="privacy-note">Você recebe confirmação imediata e retornamos com o diagnóstico
-                        inicial.<br>Seus dados estão seguros conosco.</p>
-                </form>
-            </div>
+          <!-- Contact Info Mobile/Desktop -->
+          <div class="contact-badges">
+            <a
+              href="https://wa.me/5583991287155"
+              target="_blank"
+              class="contact-badge"
+            >
+              <span>📱 (83) 99128-7155</span>
+            </a>
+            <a
+              href="https://www.instagram.com/orkyo_ia/"
+              target="_blank"
+              class="contact-badge"
+            >
+              <span>📸 @orkyo_ia</span>
+            </a>
+          </div>
         </div>
+        <div class="form-wrapper reveal-right">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="nome">Nome Completo</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome_completo"
+                placeholder="Seu nome"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="empresa">Nome da Empresa</label>
+              <input
+                type="text"
+                id="empresa"
+                name="nome_empresa"
+                placeholder="Sua empresa"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">E-mail Corporativo</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email_corporativo"
+                  placeholder="voce@empresa.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone_whatsapp"
+                  placeholder="(11) 99999-9999"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="gargalo"
+                >Qual seu principal Gargalo Operacional?</label
+              >
+              <textarea
+                id="gargalo"
+                name="gargalo_operacional"
+                rows="4"
+                placeholder="Descreva brevemente o maior desafio da sua operação hoje..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+              Enviar Solicitação
+            </button>
+            <p class="privacy-note">
+              Você recebe confirmação imediata e retornamos com o diagnóstico
+              inicial.<br />Seus dados estão seguros conosco.
+            </p>
+          </form>
+        </div>
+      </div>
     </section>
 
     <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Perguntas Frequentes</h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item reveal stagger-1">
-                    <h4>O diagnóstico é gratuito?</h4>
-                    <p>Sim, a análise inicial para identificar oportunidades é 100% gratuita.</p>
-                </div>
-                <div class="faq-item reveal stagger-2">
-                    <h4>Em quanto tempo retornam?</h4>
-                    <p>Nosso time entra em contato em até 24h úteis após o envio do formulário.</p>
-                </div>
-                <div class="faq-item reveal stagger-3">
-                    <h4>Vocês implementam ou só orientam?</h4>
-                    <p>Entregamos a solução completa: consultoria estratégica e implementação "mão na massa".</p>
-                </div>
-                <div class="faq-item reveal stagger-4">
-                    <h4>Integram com meu sistema atual?</h4>
-                    <p>Sim, somos especialistas em APIs e integramos com a maioria dos sistemas de mercado.</p>
-                </div>
-                <div class="faq-item reveal stagger-5">
-                    <h4>Como funciona a confidencialidade?</h4>
-                    <p>Todos os dados compartilhados são protegidos por NDA (Acordo de Confidencialidade).</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Perguntas Frequentes</h2>
         </div>
+        <div class="faq-grid">
+          <div class="faq-item reveal stagger-1">
+            <h4>O diagnóstico é gratuito?</h4>
+            <p>
+              Sim, a análise inicial para identificar oportunidades é 100%
+              gratuita.
+            </p>
+          </div>
+          <div class="faq-item reveal stagger-2">
+            <h4>Em quanto tempo retornam?</h4>
+            <p>
+              Nosso time entra em contato em até 24h úteis após o envio do
+              formulário.
+            </p>
+          </div>
+          <div class="faq-item reveal stagger-3">
+            <h4>Vocês implementam ou só orientam?</h4>
+            <p>
+              Entregamos a solução completa: consultoria estratégica e
+              implementação "mão na massa".
+            </p>
+          </div>
+          <div class="faq-item reveal stagger-4">
+            <h4>Integram com meu sistema atual?</h4>
+            <p>
+              Sim, somos especialistas em APIs e integramos com a maioria dos
+              sistemas de mercado.
+            </p>
+          </div>
+          <div class="faq-item reveal stagger-5">
+            <h4>Como funciona a confidencialidade?</h4>
+            <p>
+              Todos os dados compartilhados são protegidos por NDA (Acordo de
+              Confidencialidade).
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-links">
-                <a href="sobre.html">Sobre</a>
-                <a href="clientes.html">Clientes</a>
-                <a href="https://iaparanegociios.lovable.app/" target="_blank">App Orkyo</a>
-                <a href="https://www.instagram.com/orkyo_ia/" target="_blank">Instagram</a>
-                <a href="https://wa.me/5583991287155" target="_blank">WhatsApp</a>
-            </div>
-            <p>&copy; 2026 Orkyo AI - IA Para Negócios. Todos os direitos reservados.</p>
+      <div class="container footer-content">
+        <div class="footer-links">
+          <a href="sobre.html">Sobre</a>
+          <a href="clientes.html">Clientes</a>
+          <a href="https://iaparanegociios.lovable.app/" target="_blank"
+            >App Orkyo</a
+          >
+          <a href="https://www.instagram.com/orkyo_ia/" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://wa.me/5583991287155" target="_blank">WhatsApp</a>
         </div>
+        <p>
+          &copy; 2026 Orkyo AI - IA Para Negócios. Todos os direitos reservados.
+        </p>
+      </div>
     </footer>
 
     <!-- Custom Success Modal -->
     <div id="successModal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-icon">🎉</div>
-            <h3>Automação Iniciada!</h3>
-            <p>Seus dados foram enviados com sucesso.</p>
-            <p class="sub-text">Nossa IA já está processando sua solicitação e em breve um consultor entrará em contato.
-            </p>
-            <button id="closeModalBtn" class="btn-primary">Entendido</button>
-        </div>
+      <div class="modal-content">
+        <div class="modal-icon">🎉</div>
+        <h3>Automação Iniciada!</h3>
+        <p>Seus dados foram enviados com sucesso.</p>
+        <p class="sub-text">
+          Nossa IA já está processando sua solicitação e em breve um consultor
+          entrará em contato.
+        </p>
+        <button id="closeModalBtn" class="btn-primary">Entendido</button>
+      </div>
     </div>
 
     <script>
-        // ==========================================
-        // 1. HERO PARTICLE CANVAS
-        // ==========================================
-        (function () {
-            const canvas = document.getElementById('heroCanvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            let particles = [];
-            const PARTICLE_COUNT = 60;
+      // ==========================================
+      // 1. HERO PARTICLE CANVAS
+      // ==========================================
+      (function () {
+        const canvas = document.getElementById("heroCanvas");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        let particles = [];
+        const PARTICLE_COUNT = 60;
 
-            function resize() {
-                const hero = canvas.parentElement;
-                canvas.width = hero.offsetWidth;
-                canvas.height = hero.offsetHeight;
-            }
-
-            function createParticle() {
-                return {
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    radius: Math.random() * 2 + 0.5,
-                    speedX: (Math.random() - 0.5) * 0.4,
-                    speedY: (Math.random() - 0.5) * 0.3,
-                    opacity: Math.random() * 0.5 + 0.1
-                };
-            }
-
-            function init() {
-                resize();
-                particles = [];
-                for (let i = 0; i < PARTICLE_COUNT; i++) {
-                    particles.push(createParticle());
-                }
-            }
-
-            function drawFrame() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                particles.forEach(p => {
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(0, 195, 249, ${p.opacity})`;
-                    ctx.fill();
-
-                    p.x += p.speedX;
-                    p.y += p.speedY;
-                    if (p.x < 0) p.x = canvas.width;
-                    if (p.x > canvas.width) p.x = 0;
-                    if (p.y < 0) p.y = canvas.height;
-                    if (p.y > canvas.height) p.y = 0;
-                });
-
-                // Draw lines between nearby particles
-                for (let i = 0; i < particles.length; i++) {
-                    for (let j = i + 1; j < particles.length; j++) {
-                        const dx = particles[i].x - particles[j].x;
-                        const dy = particles[i].y - particles[j].y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        if (dist < 120) {
-                            ctx.beginPath();
-                            ctx.strokeStyle = `rgba(0, 195, 249, ${0.08 * (1 - dist / 120)})`;
-                            ctx.lineWidth = 0.5;
-                            ctx.moveTo(particles[i].x, particles[i].y);
-                            ctx.lineTo(particles[j].x, particles[j].y);
-                            ctx.stroke();
-                        }
-                    }
-                }
-
-                requestAnimationFrame(drawFrame);
-            }
-
-            window.addEventListener('resize', resize);
-            init();
-            drawFrame();
-        })();
-
-        // ==========================================
-        // 2. SCROLL REVEAL (IntersectionObserver)
-        // ==========================================
-        (function () {
-            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.15,
-                rootMargin: '0px 0px -40px 0px'
-            });
-
-            revealEls.forEach(el => observer.observe(el));
-        })();
-
-        // ==========================================
-        // 3. ANIMATED STAT COUNTERS
-        // ==========================================
-        (function () {
-            const counters = document.querySelectorAll('.stat-number[data-target]');
-            let counted = false;
-
-            function animateCounters() {
-                counters.forEach(counter => {
-                    const target = +counter.dataset.target;
-                    const duration = 2000;
-                    const start = performance.now();
-
-                    function update(now) {
-                        const elapsed = now - start;
-                        const progress = Math.min(elapsed / duration, 1);
-                        // Ease out cubic
-                        const eased = 1 - Math.pow(1 - progress, 3);
-                        counter.textContent = Math.floor(target * eased);
-                        if (progress < 1) {
-                            requestAnimationFrame(update);
-                        } else {
-                            counter.textContent = target;
-                        }
-                    }
-
-                    requestAnimationFrame(update);
-                });
-            }
-
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !counted) {
-                        counted = true;
-                        animateCounters();
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            const statsSection = document.querySelector('.stats-section');
-            if (statsSection) statsObserver.observe(statsSection);
-        })();
-
-        // ==========================================
-        // 4. NAVBAR SCROLL EFFECT
-        // ==========================================
-        (function () {
-            const navbar = document.querySelector('.navbar');
-            let lastScroll = 0;
-
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.scrollY;
-                if (currentScroll > 100) {
-                    navbar.style.padding = '12px 0';
-                    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-                } else {
-                    navbar.style.padding = '20px 0';
-                    navbar.style.boxShadow = 'none';
-                }
-                lastScroll = currentScroll;
-            });
-        })();
-
-        // ==========================================
-        // 5. FORM SUBMISSION
-        // ==========================================
-        document.getElementById('contactForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            const submitBtn = document.getElementById('submitBtn');
-            const originalText = submitBtn.innerText;
-            const modal = document.getElementById('successModal');
-            const closeModalBtn = document.getElementById('closeModalBtn');
-
-            // Loading State
-            submitBtn.innerText = 'Enviando...';
-            submitBtn.disabled = true;
-            submitBtn.style.opacity = '0.7';
-
-            // Data Mapping
-            const formData = {
-                nome_completo: document.getElementById('nome').value,
-                nome_empresa: document.getElementById('empresa').value,
-                email_corporativo: document.getElementById('email').value,
-                telefone_whatsapp: document.getElementById('telefone').value,
-                gargalo_operacional: document.getElementById('gargalo').value,
-                criado_em: new Date().toISOString(),
-                origem: 'landing_page'
-            };
-
-            console.log('Enviando dados:', formData);
-
-            try {
-                const response = await fetch('https://n8n.servmjr.site/webhook/lead', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-
-                console.log('Resposta do servidor:', response.status, response.statusText);
-
-                if (response.ok) {
-                    modal.classList.add('active');
-                    this.reset();
-
-                    closeModalBtn.onclick = () => {
-                        modal.classList.remove('active');
-                    };
-
-                    modal.onclick = (e) => {
-                        if (e.target === modal) modal.classList.remove('active');
-                    };
-
-                } else {
-                    const errorText = await response.text();
-                    throw new Error(`Erro ${response.status}: ${response.statusText || errorText}`);
-                }
-            } catch (error) {
-                console.error('Erro detalhado:', error);
-                alert(`Ocorreu um erro ao enviar: ${error.message}. Verifique se o Workflow do n8n está ATIVO.`);
-            } finally {
-                submitBtn.innerText = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.opacity = '1';
-            }
-        });
-
-        // ==========================================
-        // 6. MOBILE HAMBURGER MENU
-        // ==========================================
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        function closeMobileMenu() {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
+        function resize() {
+          const hero = canvas.parentElement;
+          canvas.width = hero.offsetWidth;
+          canvas.height = hero.offsetHeight;
         }
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
+        function createParticle() {
+          return {
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 2 + 0.5,
+            speedX: (Math.random() - 0.5) * 0.4,
+            speedY: (Math.random() - 0.5) * 0.3,
+            opacity: Math.random() * 0.5 + 0.1,
+          };
+        }
 
-        // ==========================================
-        // 7. SMOOTH SCROLL FOR NAV LINKS
-        // ==========================================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        function init() {
+          resize();
+          particles = [];
+          for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push(createParticle());
+          }
+        }
+
+        function drawFrame() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          particles.forEach((p) => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(0, 195, 249, ${p.opacity})`;
+            ctx.fill();
+
+            p.x += p.speedX;
+            p.y += p.speedY;
+            if (p.x < 0) p.x = canvas.width;
+            if (p.x > canvas.width) p.x = 0;
+            if (p.y < 0) p.y = canvas.height;
+            if (p.y > canvas.height) p.y = 0;
+          });
+
+          // Draw lines between nearby particles
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 120) {
+                ctx.beginPath();
+                ctx.strokeStyle = `rgba(0, 195, 249, ${0.08 * (1 - dist / 120)})`;
+                ctx.lineWidth = 0.5;
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          requestAnimationFrame(drawFrame);
+        }
+
+        window.addEventListener("resize", resize);
+        init();
+        drawFrame();
+      })();
+
+      // ==========================================
+      // 2. SCROLL REVEAL (IntersectionObserver)
+      // ==========================================
+      (function () {
+        const revealEls = document.querySelectorAll(
+          ".reveal, .reveal-left, .reveal-right",
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+                observer.unobserve(entry.target);
+              }
             });
-        });
-    </script>
-</body>
+          },
+          {
+            threshold: 0.15,
+            rootMargin: "0px 0px -40px 0px",
+          },
+        );
 
+        revealEls.forEach((el) => observer.observe(el));
+      })();
+
+      // ==========================================
+      // 3. ANIMATED STAT COUNTERS
+      // ==========================================
+      (function () {
+        const counters = document.querySelectorAll(".stat-number[data-target]");
+        let counted = false;
+
+        function animateCounters() {
+          counters.forEach((counter) => {
+            const target = +counter.dataset.target;
+            const duration = 2000;
+            const start = performance.now();
+
+            function update(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease out cubic
+              const eased = 1 - Math.pow(1 - progress, 3);
+              counter.textContent = Math.floor(target * eased);
+              if (progress < 1) {
+                requestAnimationFrame(update);
+              } else {
+                counter.textContent = target;
+              }
+            }
+
+            requestAnimationFrame(update);
+          });
+        }
+
+        const statsObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !counted) {
+                counted = true;
+                animateCounters();
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+
+        const statsSection = document.querySelector(".stats-section");
+        if (statsSection) statsObserver.observe(statsSection);
+      })();
+
+      // ==========================================
+      // 4. NAVBAR SCROLL EFFECT
+      // ==========================================
+      (function () {
+        const navbar = document.querySelector(".navbar");
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+          const currentScroll = window.scrollY;
+          if (currentScroll > 100) {
+            navbar.style.padding = "12px 0";
+            navbar.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.3)";
+          } else {
+            navbar.style.padding = "20px 0";
+            navbar.style.boxShadow = "none";
+          }
+          lastScroll = currentScroll;
+        });
+      })();
+
+      // ==========================================
+      // 5. FORM SUBMISSION
+      // ==========================================
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const submitBtn = document.getElementById("submitBtn");
+          const originalText = submitBtn.innerText;
+          const modal = document.getElementById("successModal");
+          const closeModalBtn = document.getElementById("closeModalBtn");
+
+          // Loading State
+          submitBtn.innerText = "Enviando...";
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = "0.7";
+
+          // Data Mapping
+          const formData = {
+            nome_completo: document.getElementById("nome").value,
+            nome_empresa: document.getElementById("empresa").value,
+            email_corporativo: document.getElementById("email").value,
+            telefone_whatsapp: document.getElementById("telefone").value,
+            gargalo_operacional: document.getElementById("gargalo").value,
+            criado_em: new Date().toISOString(),
+            origem: "landing_page",
+          };
+
+          console.log("Enviando dados:", formData);
+
+          try {
+            const response = await fetch(
+              "https://n8n.servmjr.site/webhook/lead",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+              },
+            );
+
+            console.log(
+              "Resposta do servidor:",
+              response.status,
+              response.statusText,
+            );
+
+            if (response.ok) {
+              modal.classList.add("active");
+              this.reset();
+
+              closeModalBtn.onclick = () => {
+                modal.classList.remove("active");
+              };
+
+              modal.onclick = (e) => {
+                if (e.target === modal) modal.classList.remove("active");
+              };
+            } else {
+              const errorText = await response.text();
+              throw new Error(
+                `Erro ${response.status}: ${response.statusText || errorText}`,
+              );
+            }
+          } catch (error) {
+            console.error("Erro detalhado:", error);
+            alert(
+              `Ocorreu um erro ao enviar: ${error.message}. Verifique se o Workflow do n8n está ATIVO.`,
+            );
+          } finally {
+            submitBtn.innerText = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+          }
+        });
+
+      // ==========================================
+      // 6. MOBILE HAMBURGER MENU
+      // ==========================================
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      function closeMobileMenu() {
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("active");
+      }
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+
+      // ==========================================
+      // 7. SMOOTH SCROLL FOR NAV LINKS
+      // ==========================================
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

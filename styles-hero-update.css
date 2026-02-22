@@ -1,0 +1,156 @@
+
+/* === HERO SPLIT LAYOUT (Humanized) === */
+.hero {
+    padding: 180px 0 120px;
+    position: relative;
+    text-align: left; /* Changed from center */
+    overflow: hidden;
+}
+
+.hero-split-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Adjusted for split layout */
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+    color: #FDFEFE;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin: 0 0 32px 0; /* Left align margin */
+    max-width: 100%;
+}
+
+.hero-bullets {
+    justify-content: flex-start; /* Left align bullets */
+    margin: 24px 0 32px;
+}
+
+.hero-buttons {
+    justify-content: flex-start; /* Left align buttons */
+    margin-top: 32px;
+}
+
+/* Image Content */
+.hero-image-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img-main {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.5), 
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+    transition: transform 0.5s ease;
+    border: 4px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-image-content:hover .hero-img-main {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+/* Floating Cards */
+.hero-floating-card {
+    position: absolute;
+    background: rgba(4, 45, 77, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 195, 249, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+    animation: float 4s ease-in-out infinite;
+}
+
+.card-1 {
+    top: 15%;
+    right: 0;
+    animation-delay: 0s;
+}
+
+.card-2 {
+    bottom: 15%;
+    left: -20px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive Fixes for Split Layout */
+@media (max-width: 992px) {
+    .hero-split-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-text-content {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero h1, .hero p {
+        text-align: center;
+    }
+    
+    .hero-bullets, .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image-content {
+        order: -1; /* Image first on mobile? Usually text first is better for SEO/UX, let's keep text first or image second. */
+        margin-top: 40px;
+    }
+    
+    .hero-img-main {
+        max-width: 400px;
+        transform: none; /* Remove 3D effect on mobile for simplicity */
+    }
+
+    .card-1 { right: -10px; }
+    .card-2 { left: -10px; }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-img-main {
+        max-width: 100%;
+    }
+}
